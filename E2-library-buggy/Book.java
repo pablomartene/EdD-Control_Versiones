@@ -27,3 +27,23 @@ public class Book {
         available = true;
     }
 }
+//bugs corregidos en el commit 1234567, pero no se han subido al repositorio remoto.
+// BUG 2 corregido: Ahora valida si el libro ya está prestado antes de cambiar el estado
+public void borrow() {
+    if (available) {
+        available = false;
+        System.out.println("El libro '" + title + "' ha sido prestado con éxito.");
+    } else {
+        System.out.println("Error: El libro '" + title + "' ya está prestado.");
+    }
+}
+
+// BUG 3 corregido: Ahora valida si el libro ya estaba en la biblioteca
+public void returnBook() {
+    if (!available) {
+        available = true;
+        System.out.println("El libro '" + title + "' ha sido devuelto.");
+    } else {
+        System.out.println("Error: El libro '" + title + "' ya estaba disponible en la biblioteca.");
+    }
+}
