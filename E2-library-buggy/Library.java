@@ -32,3 +32,4 @@ public class Library {
     
     // BUG 8: Falta método para quitar libros
 }
+ 
